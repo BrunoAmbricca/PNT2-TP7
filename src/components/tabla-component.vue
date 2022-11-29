@@ -43,17 +43,14 @@
     },
     methods: {
       async getUsuarios() {
-        try {
-          this.axios(this.url)
-          .then(response => {
-            let respuesta = response.data
-            this.usuarios = respuesta
-          })
-          .catch(error => console.error(error))
-        }
-        catch(error) {
-           console.error('ERROR en getUsuarios', error)
-        }
+        
+        this.axios(this.url)
+        .then(response => {
+          let respuesta = response.data
+          this.usuarios = respuesta
+        })
+        .catch(error => console.error(error))
+
       }
     },
     computed: {
